@@ -9,9 +9,10 @@ function fetchJoke() {
 		document.querySelector('#jokes')
 			.innerHTML += 
 			`<div class='joke'>
-				<h1>${jokes.type}</h1>
+				<h1>Type: ${jokes.type}</h1>
 				<p>${jokes.setup}</p>
 				<p>${jokes.punchline}</p>
+				<button onClick="window.location.reload();">New Joke</button>
 			</div>
 			`;
 	}).catch(error => {
